@@ -25,7 +25,7 @@ export default class Timeline extends Component {
   };
 
   subscribeToEvents = () => {
-    const io = socket('http://localhost:3000');
+    const io = socket('http://10.19.164.104:3000');
 
     io.on('tweet', data => {
       this.setState({ tweets: [data, ...this.state.tweets] });
